@@ -4,6 +4,8 @@ import {ArrowUpDown} from "lucide-react"
 import {Button} from "@/components/ui/button";
 import {format, formatDistance} from "date-fns";
 import {es} from "date-fns/locale";
+import Link from "next/link";
+import {LOAN_STATES} from "@/infraestructure/types/loanTypes";
 
 export type Loan = {
   id: string
@@ -11,6 +13,7 @@ export type Loan = {
   itemName: string
   description: string
   quantity: number
+  stateStart: string
   borrowedAt: Date
   returnBy: Date
 }
@@ -53,13 +56,32 @@ export const all_loans_columns: ColumnDef<Loan>[] = [
   {
     accessorKey: "returnBy",
     header: "Debe ser regresado para",
-    cell: ({ row }) => {
+    cell: ({row}) => {
       const returnDate = row.getValue("returnBy")
-      const formatted = formatDistance( returnDate , Date.now() , {addSuffix: true , locale: es}) + " el " + format(returnDate , 'dd/MM/yyyy')
+      const formatted = formatDistance(returnDate, Date.now(), {
+        addSuffix: true,
+        locale: es
+      }) + " el " + format(returnDate, 'dd/MM/yyyy')
 
       return <div className="text-right font-medium">{formatted}</div>
     },
 
+  },
+  {
+    accessorKey: "stateStart",
+    header: "Estado del prestamo",
+
+  },
+  {
+    id: "options",
+    header: "Options",
+    cell: ({row}) => {
+      const loan = row.original
+      return (
+        loan.stateStart === LOAN_STATES.PRESTADO && (
+          <Link href={`/loan/${loan.id}`} variant="outline">Realizar Devolucion</Link>)
+      )
+    },
   }
 
 

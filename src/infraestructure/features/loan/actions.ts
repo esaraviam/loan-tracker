@@ -1,14 +1,11 @@
 'use server'
 
 import {redirect} from "next/navigation";
+import {LOAN_STATES} from "@/infraestructure/types/loanTypes";
 
-const LOAN_STATES = {
-  PRESTADO: "PRESTADO",
-  DEVUELTO: "DEVUELTO"
-};
 
-import {prisma} from '@/lib/prisma'
-import {getCurrentUser} from "@/lib/auth/session";
+import {prisma} from '@/infraestructure/database/prisma'
+import {getCurrentUser} from "@/infraestructure/features/auth/session";
 import mime from 'mime';
 
 import {PutObjectCommand, S3Client} from '@aws-sdk/client-s3';
@@ -103,8 +100,7 @@ export async function returnLoan(loanId: string) {
       return { error: 'Usuario no autorizado' }
     }
 
-    console.log(loanId)
-    const loan = await prisma.loan.update({
+    await prisma.loan.update({
       where: {
         id: loanId.loanId
       },
@@ -117,7 +113,9 @@ export async function returnLoan(loanId: string) {
 
     return { success: true }
   } catch (error) {
-    //console.log(error)
+    if (error instanceof Error) {
+      return { error: error.message }
+    }
     return { error: 'Error al procesar la devolución' }
   }
 }

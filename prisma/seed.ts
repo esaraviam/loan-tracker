@@ -1,5 +1,5 @@
-import {prisma} from '../src/lib/prisma'
-import {hashPassword} from '../src/lib/auth/hash'
+import {prisma} from '@/infraestructure/database/prisma'
+import {hashPassword} from '@/infraestructure/features/auth/hash'
 
 async function main() {
   await prisma.user.create({

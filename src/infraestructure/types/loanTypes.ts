@@ -1,0 +1,4 @@
+export const LOAN_STATES = {
+  PRESTADO: "PRESTADO",
+  DEVUELTO: "DEVUELTO"
+};

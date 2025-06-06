@@ -1,6 +1,12 @@
 import Link from "next/link";
+import {getCurrentUser} from "@/infraestructure/features/auth/session";
+import {redirect} from "next/navigation";
 
 export default async function Home() {
+  const currentUser = await getCurrentUser();
+  if (currentUser) redirect("/dashboard")
+
+
   return (
     <div className="relative min-h-screen font-[family-name:var(--font-geist-sans)]">
 
@@ -9,7 +15,8 @@ export default async function Home() {
         aria-hidden="true"
       />
 
-      <div className="relative z-10 grid grid-rows-[auto_1fr_auto] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 backdrop-blur-sm">
+      <div
+        className="relative z-10 grid grid-rows-[auto_1fr_auto] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 backdrop-blur-sm">
         <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start text-center sm:text-left">
           <header>
             <h1 className="text-3xl sm:text-4xl font-bold mb-2 text-gray-300">

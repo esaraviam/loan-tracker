@@ -1,6 +1,6 @@
 'use client'
 
-import {register} from '@/lib/auth/actions'
+import {register} from '@/infraestructure/features/auth/actions'
 import {useActionState} from 'react'
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";

@@ -2,7 +2,7 @@
 import {Button} from "@/components/ui/button";
 import {useTransition} from "react";
 import {redirect} from "next/navigation";
-import {returnLoan} from "@/lib/loan/actions";
+import {returnLoan} from "@/infraestructure/features/loan/actions";
 
 export default function ReturnLoanButton( loanId:string) {
   const [isPending, startTransition] = useTransition()

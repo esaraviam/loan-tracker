@@ -1,5 +1,5 @@
 import { cookies } from 'next/headers'
-import { prisma } from '@/lib/prisma'
+import { prisma } from '@/infraestructure/database/prisma'
 
 export async function getCurrentUser() {
   const cookieStore = await cookies()

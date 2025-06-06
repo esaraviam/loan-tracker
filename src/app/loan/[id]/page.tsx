@@ -1,5 +1,5 @@
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
-import {prisma} from "@/lib/prisma";
+import {prisma} from "@/infraestructure/database/prisma";
 import Image from "next/image";
 import {format} from "date-fns";
 import {Button} from "@/components/ui/button";

@@ -1,6 +1,6 @@
 import {ModeToggle} from "@/components/shared/ModeToggle";
 import Link from "next/link";
-import {getCurrentUser} from "@/lib/auth/session";
+import {getCurrentUser} from "@/infraestructure/features/auth/session";
 import LogoutButton from "@/components/shared/LogoutButton";
 
 export default async function Menubar() {

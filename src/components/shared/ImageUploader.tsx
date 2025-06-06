@@ -2,7 +2,7 @@
 import {useState} from "react";
 import ImageUploading, {ImageListType} from "react-images-uploading";
 import Image from "next/image";
-import {UploadImage} from "@/lib/loan/actions";
+import {UploadImage} from "@/infraestructure/features/loan/actions";
 
 
 const ImageUploader = () => {
