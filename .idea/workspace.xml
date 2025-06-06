@@ -4,35 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a1044ba-fb4b-40c5-b041-6b001ff40a54" name="Changes" comment="feat: dashboard">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/infraestructure/types/loanTypes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="0a1044ba-fb4b-40c5-b041-6b001ff40a54" name="Changes" comment="config: restructure folders and architecture">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generated/prisma/runtime/library.js" beforeDir="false" afterPath="$PROJECT_DIR$/generated/prisma/runtime/library.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/dev.db" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/dev.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/seed.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/seed.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(auth)/login/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(auth)/login/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(auth)/register/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(auth)/register/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/dashboard/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboard/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/loan/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/loan/[id]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/loan/create/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/loan/create/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dashboard/all_loans_columns.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/all_loans_columns.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/loan/returnLoanButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/loan/returnLoanButton.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shared/ImageUploader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/ImageUploader.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shared/LogoutButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/LogoutButton.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shared/Menubar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/Menubar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/auth/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/infraestructure/features/auth/actions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/auth/hash.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/infraestructure/features/auth/hash.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/auth/session.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/infraestructure/features/auth/session.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/dashboad/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/infraestructure/features/dashboad/actions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/loan/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/infraestructure/features/loan/actions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/prisma.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/infraestructure/database/prisma.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +108,7 @@
       <workItem from="1748974376899" duration="2017000" />
       <workItem from="1748976403840" duration="4065000" />
       <workItem from="1748980911700" duration="28306000" />
-      <workItem from="1749141287152" duration="24128000" />
+      <workItem from="1749141287152" duration="24818000" />
     </task>
     <task id="LOCAL-00001" summary="config: add inital configs">
       <option name="closed" value="true" />
@@ -185,7 +158,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749218158368</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="config: restructure folders and architecture">
+      <option name="closed" value="true" />
+      <created>1749223564077</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1749223564077</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,6 +192,7 @@
     <MESSAGE value="feat: loan feature" />
     <MESSAGE value="feat: auth add middleware" />
     <MESSAGE value="feat: dashboard" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: dashboard" />
+    <MESSAGE value="config: restructure folders and architecture" />
+    <option name="LAST_COMMIT_MESSAGE" value="config: restructure folders and architecture" />
   </component>
 </project>
