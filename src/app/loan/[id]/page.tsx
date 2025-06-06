@@ -2,15 +2,10 @@ import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} f
 import {prisma} from "@/infraestructure/database/prisma";
 import Image from "next/image";
 import {format} from "date-fns";
-import {Button} from "@/components/ui/button";
 import ReturnLoanButton from "@/components/loan/returnLoanButton";
 
-function IconTrendingUp() {
-  return null;
-}
-
-export default async function LoanPage({params}: { params: { id: string } }) {
-  const {id} = await params
+export default async function LoanPage({ params }: { params: { id: string } }) {
+  const {id} = params
   const loan = await prisma.loan.findUnique({
     where: {
       id: id
